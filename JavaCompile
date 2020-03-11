@@ -1,0 +1,45 @@
+javac Hello.java
+java Hello
+
+"C:\Program Files\Java\jdk-12.0.1\bin\javac"
+"C:\Program Files\Java\jdk-12.0.1\bin\java"
+"C:\Program Files\Java\jdk-12.0.1\bin\jar" (Compilar Tudo)
+java -cp bin hello ("Espia a pasta") 
+java -cp src hello ("Espia a pasta")
+javac src/*.java -d bin ("Compilar todos os .java, no caso vao virar .class")
+
+tbm pode usar 
+
+javac src/*.java -d bin (-d "onde/destino")
+
+java -cp bin Hello (-cp "pular/olhar")
+
+jar --create --file -C (pasta)
+exemplo:
+"C:\Program Files\Java\jdk-12.0.1\bin\jar" --create --file dist/myapp.jar --main-class=hello -C bin/ .
+rodar programar:
+C:\Users\IFPB\.IdeaIC2019.1\config\scratches>"C:\Program Files\Java\jdk-12.0.1\bin\java" -jar dist/myapp.jar
+
+-pacotes
+
+nome do pacote reflete a estrutura de diretorios
+
+exemplo
+package br.edu.ifpb;
+
+a pasta ficaria br/edu/ifpb
+
+e os comandos mudariam tbm:
+javac src/br/edu/ifpb/*.java -d bin
+java -cp bin br.edu.ifpb.hello
+jar --create --file dist/myapp.jar --main-class=br.edu.ifpb.hello -C bin/ .
+
+
+ - Maven
+
+Codigo do Exemplo github
+
+prestar atençaao no -DgroupId=br.edu.ifpb(Nome do pacote) -DartifactId=my-app (Nome do diretorio padrão) DarcheTypeArticfactId = Modelo do Maven (o do git e sem aplicaçoes Web)
+
+mvn compile
+mvn package
