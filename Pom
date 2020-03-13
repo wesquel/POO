@@ -65,4 +65,40 @@
     </dependencies>
     --------------------------------------- main class pom ---------------------------------------------------
     
-    
+    criar um package, deve criar pastas por exemplo dentro da pasta (C:\Users\wesqu\Desktop\JAR)
+existe outras duas pastas(bin,src)
+e dentro dessas pastas existe outras pastas relacionadas ao package
+
+ex:
+
+br.edu.ifpb = (C:\Users\wesqu\Desktop\JAR\src\br\edu\ifpb) e (C:\Users\wesqu\Desktop\JAR\bin\br\edu\ifpb)
+
+para COMPILAR e so usar o comando
+
+--------------------------------COMPILAR-------------------------------
+javac "pasta onde estao o .java" -d "pasta onde os .class vao parar"
+
+ex:
+
+javac src/br/edu/ifpb/*.java -d bin
+-----------------------------------------------------------------------
+
+para EXECUTAR:
+
+--------------------------------EXECUTAR-----------------------------------------
+java -cp "pasta onde estar o .class" "package(se tiver).(nome da clase a rodar)"
+
+ex:
+
+java -cp bin br.edu.ifpb.teste
+---------------------------------------------------------------------------------
+
+para criar um JAR:
+
+--------------------------------JAR---------------------------------------------------------------------------------------------------------------
+jar --create --file "pasta onde o jar vai parar" --main-class="nome da classe principal junto com package" -C "Nome da pasta onde estao os class".
+
+ex:
+
+jar --create --file myapp.jar --main-class=br.edu.ifpb.teste -C bin/ .
+--------------------------------------------------------------------------------------------------------------------------------------------------
