@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="384.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addson.weslley.pratica3.Controller">
+   <children>
+      <AnchorPane prefHeight="54.0" prefWidth="384.0" style="-fx-background-color: #b0b0b0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="55.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="38.0" fitWidth="35.0" onMouseClicked="#userButtonClicker" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/account_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="38.0" fitWidth="35.0" onMouseClicked="#registerButtonClicker" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/register_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="38.0" fitWidth="35.0" onMouseClicked="#moneyButtonClicker" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/money_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fitHeight="38.0" fitWidth="35.0" onMouseClicked="#exitButtonClicker" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/exit_icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="userPanel" layoutY="210.0" prefHeight="304.0" prefWidth="384.0" style="-fx-background-color: #b0b0b0;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="titularTextAccount" focusColor="BLACK" layoutX="130.0" layoutY="72.0" prefHeight="25.0" prefWidth="221.0" promptText="Nome do Titular" unFocusColor="BLACK" />
+            <Label layoutX="70.0" layoutY="76.0" text="Titular" />
+            <Label layoutX="65.0" layoutY="166.0" text="Numero" />
+            <JFXTextField fx:id="numeroTextAccount" focusColor="BLACK" layoutX="130.0" layoutY="162.0" prefHeight="25.0" prefWidth="221.0" promptText="Numero da conta." unFocusColor="BLACK" />
+            <Label layoutX="132.0" layoutY="14.0" text="Consultar Conta">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="CENTER" cache="true" cacheHint="SPEED" layoutX="116.0" layoutY="234.0" prefHeight="25.0" prefWidth="153.0" ripplerFill="BLACK" style="-fx-background-color: #969696;" text="Consultar" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="registerPanel" prefHeight="304.0" prefWidth="384.0" style="-fx-background-color: #b0b0b0;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="125.0" layoutY="14.0" text="Registro de Conta">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="titularTextRegister" focusColor="BLACK" layoutX="125.0" layoutY="68.0" prefHeight="25.0" prefWidth="221.0" promptText="Nome do Titular" unFocusColor="BLACK" />
+            <JFXTextField fx:id="CPFTextRegister" focusColor="BLACK" layoutX="125.0" layoutY="127.0" prefHeight="25.0" prefWidth="221.0" promptText="CPF do titular" unFocusColor="BLACK" />
+            <JFXComboBox fx:id="comboBoxRegister" layoutX="125.0" layoutY="191.0" prefHeight="25.0" prefWidth="221.0" promptText="Tipo de Conta" unFocusColor="BLACK" />
+            <Label layoutX="48.0" layoutY="72.0" text="Titular" />
+            <Label layoutX="55.0" layoutY="131.0" text="CPF" />
+            <Label layoutX="53.0" layoutY="195.0" text="Tipo" />
+            <JFXButton alignment="CENTER" cache="true" cacheHint="SPEED" layoutX="116.0" layoutY="246.0" prefHeight="25.0" prefWidth="153.0" ripplerFill="BLACK" style="-fx-background-color: #969696;" text="Registrar" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="moneyPanel" prefHeight="304.0" prefWidth="384.0" style="-fx-background-color: #b0b0b0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="numeroTextTransacao" focusColor="BLACK" layoutX="133.0" layoutY="48.0" prefHeight="25.0" prefWidth="221.0" promptText="Nome do Titular" unFocusColor="BLACK" />
+            <Label layoutX="23.0" layoutY="52.0" text="Numero da conta" />
+            <Label layoutX="59.0" layoutY="107.0" text="CPF" />
+            <JFXTextField fx:id="CPFTextTransacao" focusColor="BLACK" layoutX="133.0" layoutY="103.0" prefHeight="25.0" prefWidth="221.0" promptText="CPF do titular" unFocusColor="BLACK" />
+            <JFXComboBox fx:id="comboBoxMoney" layoutX="133.0" layoutY="152.0" prefHeight="25.0" prefWidth="221.0" promptText="Tipo de Transação" />
+            <Label layoutX="21.0" layoutY="156.0" text="Tipo de Transação" />
+            <Label layoutX="56.0" layoutY="210.0" text="Valor" />
+            <JFXTextField fx:id="valorTextTransacao" focusColor="BLACK" layoutX="133.0" layoutY="206.0" prefHeight="25.0" prefWidth="221.0" promptText="Valor total da transação" unFocusColor="BLACK" />
+            <Label layoutX="145.0" layoutY="14.0" prefWidth="97.0" text="Transações">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="CENTER" cache="true" cacheHint="SPEED" layoutX="116.0" layoutY="256.0" prefHeight="25.0" prefWidth="153.0" ripplerFill="BLACK" style="-fx-background-color: #969696;" text="Transações" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="arrowUser" fitHeight="19.0" fitWidth="35.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Icons/icon_arrow.png" />
+         </image></ImageView>
+      <ImageView fx:id="arrowRegister" fitHeight="19.0" fitWidth="35.0" layoutX="136.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Icons/icon_arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="arrowMoney" fitHeight="19.0" fitWidth="35.0" layoutX="224.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@Icons/icon_arrow.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
