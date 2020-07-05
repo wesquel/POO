@@ -8,7 +8,7 @@
         <module>modulo-gui</module>
         <module>modulo-interface</module>
     </modules>
-
+----------------------------------------------------------------------
     <packaging>pom</packaging>
     
         
