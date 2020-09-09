@@ -1,1 +1,2 @@
+## Prompt Maven
 mvn archetype:generate -DgroupId=br.edu.ifpb -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
